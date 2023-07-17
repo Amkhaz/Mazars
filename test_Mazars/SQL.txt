@@ -1,0 +1,17 @@
+1-
+SELECT FirstName, LastName 
+FROM Employees 
+WHERE HireDate = 2020;
+
+2-
+SELECT D.DepartmentName, COUNT(E.EmployeeID) as EmployeeCount 
+FROM Departments D 
+LEFT JOIN Employees E ON D.DepartmentID = E.DepartmentID 
+GROUP BY D.DepartmentName;
+
+3- 
+SELECT E.FirstName, E.LastName 
+FROM Employees E
+INNER JOIN Departments D ON E.DepartmentID = D.DepartmentID 
+WHERE D.DepartmentName = 'Sales';
+
